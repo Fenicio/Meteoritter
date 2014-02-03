@@ -1,0 +1,16 @@
+<head>
+</head>
+
+<body>
+	<header>
+		{{> header}}
+	</header>
+	{{#if currentUser}}
+		{{> list}}
+	{{else}}
+		{{> start}}
+	{{/if}}
+	<footer>
+		{{> footer}}
+	</footer>
+</body>
