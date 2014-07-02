@@ -1,16 +1,33 @@
 <template name="header">
-	<div class="wrapper">
-		<span>Meteoritter</span>
-		{{#if currentUser}}
-			<nav>
-				<input type="submit" id="btnLogOut" value="Log Out">
-			</nav>
-		{{else}}
-			<p>
-				<input id="username" name="username" placeholder="username" type="text" />
-				<input id="password" name="password" placeholder="password" type="password" />
-				<input id="btnLogIn" type="submit" value="Log In">
-			</p>
-		{{/if}}
-	</div>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#collapsable">
+					<span class="sr-only"> Navegación</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+				</button>
+				<a href="/" class="navbar-brand">Meteoritter</a>
+			</div>
+			<div class="collapse navbar-collapse" id="collapsable">
+				{{#if currentUser}}
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="/{{currentUsername}}" class="pull-right">{{currentUsername}}</a>
+						</li>
+						<li>
+							<input type="submit" id="btnLogOut" value="Log Out" class="pull-right">
+						</li>
+					</ul>
+				{{else}}
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							{{> loginButtons }}
+						</li>
+					</ul>
+				{{/if}}
+			</div>
+		</div>
+	</nav>
 </template>
