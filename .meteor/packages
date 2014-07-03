@@ -5,7 +5,7 @@
 
 standard-app-packages
 iron-router
-accounts-ui-bootstrap-dropdown
 accounts-base
 accounts-facebook
 bootstrap-3
+accounts-ui-bootstrap-3

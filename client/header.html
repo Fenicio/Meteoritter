@@ -11,22 +11,20 @@
 				<a href="/" class="navbar-brand">Meteoritter</a>
 			</div>
 			<div class="collapse navbar-collapse" id="collapsable">
+				<ul class="nav navbar-nav">
 				{{#if currentUser}}
-					<ul class="nav navbar-nav">
+					
 						<li>
 							<a href="/{{currentUsername}}" class="pull-right">{{currentUsername}}</a>
 						</li>
-						<li>
-							<input type="submit" id="btnLogOut" value="Log Out" class="pull-right">
-						</li>
-					</ul>
-				{{else}}
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							{{> loginButtons }}
-						</li>
-					</ul>
+					
 				{{/if}}
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						{{> loginButtons }}
+					</li>
+				</ul>
 			</div>
 		</div>
 	</nav>
