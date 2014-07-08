@@ -1,2 +1,14 @@
 <template name="user">
+  <h2 class="page-title">{{username}}</h2>
+
+  {{#if isCurrentUsername}}
+  {{/if}}
+
+  <div class="row">
+    <div class="list-group">
+      {{#each tweets}}
+        {{> tweet}}
+      {{/each}}
+    </div>
+  </div>
 </template>
