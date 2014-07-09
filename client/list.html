@@ -1,5 +1,12 @@
 <template name="list">
-	<div class="listWrapper">
+  {{#if currentUser}}
+    <h2>¿Que está ocurriendo?</h2>
+    <form name="tweet-form">
+      <textarea name="tweet" cols="10" rows="2" class="form-control"></textarea>
+      <input type="submit" class="btn btn-primary" value="Tweet">
+    </form>
+  {{/if}}
+	<div class="list-group">
 		{{#each tweets}}
 			{{> tweet}}
 		{{/each}}
