@@ -16,7 +16,6 @@ Meteor.methods({
     if(!tweetAttr.texto)
       throw new Meteor.Error(402, "Un Tweet necesita texto");
 
-    console.log("post", tweetAttr);
     var tweet = _.extend(_.pick(tweetAttr, 'texto'), {
       userId: user._id,
       autor: user.profile.name,
@@ -24,7 +23,6 @@ Meteor.methods({
     });
 
     var tweetId = Tweets.insert(tweet);
-    console.log(tweet);
     return tweetId;
   }
 });

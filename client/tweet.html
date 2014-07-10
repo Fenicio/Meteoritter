@@ -1,9 +1,9 @@
 <template name="tweet">
 	<div class="list-group-item">
-		<span class="name">{{autor}} twiteo: </span>
+		<a class="name" href="/user/{{userId}}">{{autor}}  </a> twiteo:
 		<p>
 			{{texto}}
 		</p>
-    <small>{{ haceCuanto }}</small>
+    <small>hace {{ haceCuanto }}</small>
 	</div>
 </template>
